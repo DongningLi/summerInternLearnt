@@ -1,0 +1,13 @@
+//darker or lighter
+$red:#ff4848
+$fontsize:12px
+h1
+  color:$red
+p
+  color:darken($red, 10%)
+  color:$red - #101 //plus or minus a hexadecimal color number
+ 
+font-size:$fontsize+10px
+
+//special character
+// & : use for Replacement of parent character

@@ -1,0 +1,41 @@
+/*
+在申明全局变量以后
+若局部改变a的值
+则之后所有a的值均随之改变。
+否则，应设置局部变量。
+*/
+// Exmaple 1
+$color:red;
+p{
+    $color:blue;
+    color:$color; //result: blue
+}
+a{
+    color:$color; //result: blue
+}
+// Example 2
+p{
+    $color:blue;
+    color:$color;//result: blue
+}
+a{
+    color:$color;//result: $color未定义
+}
+	
+//默认属性值设置
+$color: red;
+$color: blue !default;
+$border: 1px solid !default
+//设置NOT默认值以后
+$border:5px;
+@import "shangshuwenjiandaoru" //不加后缀，文件的导入
+
+//变量设置在属性值上时，用#{}包裹起来
+.#{$btnclass}{
+border-#{$borderDirection}:1px solid #ccc;
+}
+/* --------------- result: -----------------
+.btn{
+border-top:1px solid #ccc;
+}
+*/

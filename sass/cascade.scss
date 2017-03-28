@@ -1,0 +1,52 @@
+/*  //css format
+.post {
+  border-radius: 3px;
+  background: #FFF8FF;
+  border: 1px solid #EFC6F3;
+  padding: 15px;
+  color: #333333;
+}
+.post .title, .post .alt-title  {
+  color: #000000;
+  font-size:20px;
+}
+.post .alt-title {
+  border-bottom:1px solid #EFC6F3;
+}  */
+
+
+// CHANGE to sass format
+// cascade implemented by write in {}
+// name a variable for frequently used constants
+$border: 1px solid #EFC6F3;
+.post{
+
+  border-radius: 3px;
+  background: #FFF8FF;
+  border: $border
+  padding: 15px;
+  color: #333333;
+  .title{
+  color: #000000;
+  font-size:20px;
+  }
+  .alt-title{
+  @extend .title;  //extend to call the same setting for another variable
+  border-bottom:$border;
+  }
+}
+
+
+
+//two ways
+#google_ad
+//break into 2 lines and left 2 spaces
+border: 
+  top:1px solid $red
+  left:1px solid $blue
+//which is equivalent to 
+#google_ad{
+	border-top:1px solid $red;
+	border_left:1px solid $blue;
+}
+

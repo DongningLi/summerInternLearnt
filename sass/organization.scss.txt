@@ -1,0 +1,16 @@
+// module imports
+@import "<file name without sass>"
+
+
+//base particial
+//categorize pixel to different names for using frequently
+// $ for naming variables
+
+//font weight
+$light:100;
+$regular:400;
+$bold:600;
+
+//base font
+$base-font-family:sans-serif;
+$base-font-weight:$light

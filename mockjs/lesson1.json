@@ -1,0 +1,45 @@
+//模版由三部分组成：属性名 规则 属性值
+//'name|rule':value
+
+//'name|min-max': value
+//'name|count': value
+//'name|min-max.dmin-dmax': value
+//'name|min-max.dcount': value
+//'name|count.dmin-dmax': vlue
+//'name|count.dcount': value
+//'name|+step': value
+
+{'list|1-10':{
+	'id|+1':1
+    }]
+}
+
+/*result
+{
+    "list":[
+        {"id":1},
+        {"id":2},
+        {"id":3},
+        {"id":4},
+		{"id":5}
+    ]
+}*/
+	
+	
+	
+／＊ 属性值时string
+'name|min-max':string: 重复［min,max］遍，生成字符串 
+'name|count': string：重复count遍，生成字符串
+*/
+
+/* 属性是数字
+'name|+1':number   属性自加1，起始值为number
+'name|min-max':number   生成一个[min,max]间的数，number仅用来确定类型
+'name|min-max.dmin-dmax':number   生成浮点数. 整数部分[min,max],小数部分保留位数[dmin,dmax]
+*/
+
+/*属性是布尔类型
+'name|1':boolean     随机生成一个布尔值 值为true的概率为1/2， false的概率为1/2
+'name|min-max':value  随机生成布尔值 值为value的概率为min／(min+max), 值为!value概率为max/(min+max)
+*/
+
